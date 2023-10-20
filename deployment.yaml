@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-producer-k8s
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rabbitmq-producer-k8s
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-producer-k8s
+    spec:
+      containers:
+      - image: rabbitmq-producer:4.8
+        imagePullPolicy: IfNotPresent
+        name: rabbitmq-producer-k8s
+        ports:
+        - containerPort: 8080

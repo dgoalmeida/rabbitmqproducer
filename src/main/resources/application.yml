@@ -1,0 +1,14 @@
+server:
+  port: 8080
+logging:
+  pattern:
+    level: '%clr(%5p) %clr([traceid=%X{traceId:-} spanid=%X{spanId:-} parentspanid=%X{parentId:-}]){green}'
+  level:
+    root: DEBUG
+spring:
+  rabbitmq:
+    image: rabbitmq:management
+    host: production-rabbitmqcluster
+    ports:
+      - "5672:5672"
+      - "15672:15672"
