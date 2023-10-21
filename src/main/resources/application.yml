@@ -4,7 +4,7 @@ logging:
   pattern:
     level: '%clr(%5p) %clr([traceid=%X{traceId:-} spanid=%X{spanId:-} parentspanid=%X{parentId:-}]){green}'
   level:
-    root: DEBUG
+    root: INFO
 spring:
   rabbitmq:
     image: rabbitmq:management
