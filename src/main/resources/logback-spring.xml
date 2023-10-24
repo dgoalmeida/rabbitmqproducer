@@ -5,27 +5,12 @@
             <pattern> %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n </pattern>
         </encoder>
     </appender>
-    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender"/>
     <file>logs/application.log</file>
-    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-        <Pattern> %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n </Pattern>
-    </encoder>
+
     <logger name="com.example.rabbitmqproducer" additivity="false" level="info">
         <appender-ref ref="STDOUT" />
     </logger>
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
-    </root>
-    <logger name="com.example.rabbitmqproducer" additivity="false" level="error">
-        <appender-ref ref="STDOUT" />
-    </logger>
-    <root level="ERROR">
-        <appender-ref ref="STDOUT" />
-    </root>
-    <logger name="com.example.rabbitmqproducer" additivity="false" level="debug">
-        <appender-ref ref="STDOUT" />
-    </logger>
-    <root level="DEBUG">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>
