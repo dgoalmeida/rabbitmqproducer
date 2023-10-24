@@ -24,3 +24,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.jar {
+	archiveFileName.set("${project.name}.jar")
+}
