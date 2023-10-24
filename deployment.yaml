@@ -13,7 +13,7 @@ spec:
         app: rabbitmq-producer-k8s
     spec:
       containers:
-      - image: rabbitmq-producer:12.16
+      - image: rabbitmq-producer:13.17
         imagePullPolicy: IfNotPresent
         name: rabbitmq-producer-k8s
         ports:
